@@ -65,10 +65,11 @@ nav a:hover {
 .hero::before {
   content: "";
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom right, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
 }
 
 .contenido-hero {
@@ -81,13 +82,13 @@ nav a:hover {
 .contenido-hero h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .contenido-hero p {
   font-size: 1.5rem;
   font-style: italic;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* Sobre nosotros */
@@ -104,7 +105,7 @@ nav a:hover {
 .contenido img {
   max-width: 100%;
   border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   flex: 1 1 300px;
 }
 
@@ -128,40 +129,45 @@ nav a:hover {
   font-weight: bold;
 }
 
-/* Misión y visión */
-.mision, .vision {
+/* Misión y Visión */
+.mision,
+.vision {
   max-width: 1000px;
   margin: auto;
   padding: 2rem;
   background-color: #fff2d6;
   border-left: 6px solid #cc0000;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.mision h2, .vision h2 {
+.mision h2,
+.vision h2 {
   font-size: 2rem;
   color: #cc0000;
   margin-bottom: 1rem;
 }
 
-.mision p, .vision p {
+.mision p,
+.vision p {
   font-size: 1.2rem;
   line-height: 1.6;
 }
 
-.caja-texto, .vision .caja-texto {
+.caja-texto,
+.vision .caja-texto {
   background-color: #fff8f0;
   padding: 1.5rem;
   border-radius: 10px;
   border: 1px solid #e0c9a6;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.caja-texto:hover, .vision .caja-texto:hover {
+.caja-texto:hover,
+.vision .caja-texto:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Productos */
@@ -201,7 +207,7 @@ section.Productos h2 {
   background-color: #fff;
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 250px;
   text-align: center;
   transition: transform 0.3s ease;
@@ -228,14 +234,14 @@ section.Productos h2 {
   font-size: 0.95rem;
 }
 
-/* Sección de Contacto */
+/* Contacto */
 .contacto {
   max-width: 800px;
   margin: auto;
   padding: 3rem 2rem;
   background-color: #fff8f0;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .contacto h2 {
@@ -292,11 +298,204 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Animación */
+/* Galería */
+.galeria {
+  max-width: 1200px;
+  margin: auto;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.galeria h2 {
+  font-size: 2.5rem;
+  color: #cc0000;
+  margin-bottom: 2rem;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+.galeria h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: #cc0000;
+  display: block;
+  margin: 8px auto 0;
+  border-radius: 4px;
+}
+
+.contenedor-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.contenedor-galeria img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+  filter: grayscale(10%) brightness(1.05);
+}
+
+.contenedor-galeria img:hover {
+  transform: scale(1.08) rotate(1deg);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  filter: none;
+}
+
+/* Carrito de Compras */
+.menu {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.menu .producto {
+  background-color: #fff8f0;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.menu .producto:hover {
+  transform: translateY(-5px);
+}
+
+.menu .producto img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.menu .producto h4 {
+  color: #cc0000;
+  margin: 0.5rem 0;
+}
+
+.menu .producto p {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.menu .producto button {
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu .producto button:hover {
+  background-color: #a30000;
+}
+
+.item-carrito {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  justify-content: space-between; /* distribuye mejor */
+}
+
+.item-carrito .imagenes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.item-carrito img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+;
+
+
+.item-carrito .info {
+  flex: 1;
+}
+
+.item-carrito input[type="number"] {
+  width: 60px;
+  padding: 0.3rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.carrito h2 {
+  font-size: 2rem;
+  color: #cc0000;
+  text-align: center; /* Esto centra el texto */
+  margin-bottom: 1.5rem;
+}
+.eliminar {
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.eliminar:hover {
+  background-color: #a30000;
+}
+
+.total {
+  text-align: right;
+  margin-top: 2rem;
+}
+
+.pagar {
+  background-color: #28a745;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.pagar:hover {
+  background-color: #218838;
+}
+
+}
+
+/* Animación */t:
 @keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
