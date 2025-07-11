@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carrito de Compras | Burger Diner</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+     <img src="burge.jpg" alt="Logo Burger Diner" class="logo">
+    <h1>Burger Diner</h1>
+    <p>¡Sabor americano directo a tu mesa!</p>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="Quienes somos.html">Quienes Somos</a>
+      <a href="Mision.html">Misión</a>
+      <a href="Vision.html">Visión</a>
+      <a href="Productos.html">Productos</a>
+      <a href="Contactanos.html">Contáctanos</a>
+      <a href="Galeria.html">Galería</a>
+      <a href="Carrito.html">Carrito de Compras</a>
+    </nav>
+  </header>
+
+  <h1>Carrito de Compras</h1>
+
+  <div class="contenedor-productos">
+    <div class="producto"><h3>Hamburguesa Clásica</h3><p>Q39.00</p><button onclick="agregar('Hamburguesa Clásica',39)">Agregar</button></div>
+    <div class="producto"><h3>Deluxe Burger</h3><p>Q55.00</p><button onclick="agregar('Cheeseburger',55)">Agregar</button></div>
+    <div class="producto"><h3>Quesadillas Mexicanas</h3><p>Q50.00</p><button onclick="agregar('Papas Fritas',50)">Agregar</button></div>
+    <div class="producto"><h3>Milkshake de Vainilla</h3><p>Q15.00</p><button onclick="agregar('Milkshake de Vainilla',15)">Agregar</button></div>
+    <div class="producto"><h3>Hamburguesa BBQ</h3><p>Q30.00</p><button onclick="agregar('Hamburguesa BBQ',30)">Agregar</button></div>
+    <div class="producto"><h3>Combo Familiar</h3><p>Q85.00</p><button onclick="agregar('Combo Familiar',85)">Agregar</button></div>
+  </div>
+
+  <div class="carrito">
+    <h2>Resumen del Carrito</h2>
+    <ul id="lista-carrito"></ul>
+    <p>Total: Q<span id="total">0.00</span></p>
+    <button onclick="enviarPedido()">Enviar pedido por WhatsApp</button>
+  </div>
+
+  <footer>
+    &copy; 2025 Burger Diner. Todos los derechos reservados.
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/50279648600?text=Hola%2C%20me%20gustaría%20hacer%20un%20pedido"
+     class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    const carrito = [];
+
+    function agregar(nombre, precio) {
+      carrito.push({ nombre, precio });
+      render();
+    }
+
+    function render() {
+      const ul = document.getElementById("lista-carrito");
+      ul.innerHTML = "";
+      let total = 0;
+      carrito.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${item.nombre} - Q${item.precio.toFixed(2)}`;
+        ul.appendChild(li);
+        total += item.precio;
+      });
+      document.getElementById("total").textContent = total.toFixed(2);
+    }
+
+    function enviarPedido() {
+      if (!carrito.length) {
+        alert("El carrito está vacío.");
+        return;
+      }
+      let mensaje = "Hola, quiero hacer un pedido:\n";
+      carrito.forEach(i => mensaje += `- ${i.nombre}: Q${i.precio.toFixed(2)}\n`);
+      const total = carrito.reduce((s, i) => s + i.precio, 0);
+      mensaje += `Total: Q${total.toFixed(2)}`;
+      const url = `https://wa.me/50279428490?text=${encodeURIComponent(mensaje)}`;
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
