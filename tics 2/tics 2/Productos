@@ -1,0 +1,99 @@
+<section class="productos">
+  <h2>Nuestros Productos</h2>
+
+  <!-- DESAYUNO -->
+  <div class="categoria">
+    <h3>Desayuno</h3>
+    <div class="contenedor-productos">
+
+      <div class="producto">
+        <img src="img/cafe.jpg" alt="Café Premium">
+        <h4>Café Premium</h4>
+        <p>Despierta tus mañanas con sabor intenso.</p>
+      </div>
+
+      <div class="producto">
+        <img src="img/panques.jpg" alt="Panqueques Caseros">
+        <h4>Panqueques Caseros</h4>
+        <p>Suaves y deliciosos, listos para disfrutar.</p>
+      </div>
+
+      <div class="producto">
+        <img src="img/yogurt.jpg" alt="Yogurt Natural">
+        <h4>Yogurt Natural</h4>
+        <p>Fresco, nutritivo y sin aditivos.</p>
+      </div>
+
+      <div class="producto">
+        <img src="img/jugo-naranja.jpg" alt="Jugo de Naranja">
+        <h4>Jugo de Naranja</h4>
+        <p>100% natural, exprimido al instante.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ALMUERZO -->
+  <div class="categoria">
+    <h3>Almuerzo</h3>
+    <div class="contenedor-productos">
+
+      <div class="producto">
+        <img src="img/pollo-asado.jpg" alt="Pollo Asado">
+        <h4>Pollo Asado</h4>
+        <p>Jugoso y bien condimentado, estilo casero.</p>
+      </div>
+
+      <div class="producto">
+        <img src="img/arroz-verduras.jpg" alt="Arroz con Verduras">
+        <h4>Arroz con Verduras</h4>
+        <p>Sano, sabroso y lleno de color.</p>
+      </div>
+
+      <div class="producto">
+        <img src="img/ensalada.jpg" alt="Ensalada Fresca">
+        <h4>Ensalada Fresca</h4>
+        <p>Con ingredientes seleccionados y aderezo natural.</p>
+      </div>
+
+      <div class="producto">
+        <img src="img/jugo-mora.jpg" alt="Jugo de Mora">
+        <h4>Jugo de Mora</h4>
+        <p>Refrescante, antioxidante y delicioso.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CENA -->
+  <div class="categoria">
+    <h3>Cena</h3>
+    <div class="contenedor-productos">
+
+      <div class="producto">
+        <img src="img/sopa.jpg" alt="Sopa de Verduras">
+        <h4>Sopa de Verduras</h4>
+        <p>Ligera, reconfortante y nutritiva.</p>
+      </div>
+
+      <div class="producto">
+        <img src="img/sandwich.jpg" alt="Sándwich Integral">
+        <h4>Sándwich Integral</h4>
+        <p>Con pan artesanal y vegetales frescos.</p>
+      </div>
+
+      <div class="producto">
+        <img src="img/te.jpg" alt="Té Relajante">
+        <h4>Té Relajante</h4>
+        <p>Ideal para terminar el día con calma.</p>
+      </div>
+
+      <div class="producto">
+        <img src="img/fruta.jpg" alt="Fruta de Temporada">
+        <h4>Fruta de Temporada</h4>
+        <p>Dulce, jugosa y lista para consumir.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
